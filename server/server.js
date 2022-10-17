@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 5000;
 const favoriteRouter = require('./routes/favorite.router');
 const categoryRouter = require('./routes/category.router');
 const searchRouter = require('./routes/search.router')
+const skydiveRouter = require('./routes/skydive.router')
 
 
 // Body parser middleware
@@ -22,6 +23,7 @@ app.use(express.static('build'));
 app.use('/api/search', searchRouter);
 app.use('/api/favorite', favoriteRouter);
 app.use('/api/category', categoryRouter);
+app.use('/api/skydive', skydiveRouter);
 
 // Listen
 app.listen(PORT, () => {
